@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Services from './components/Services/Services';
 import NotFound from './components/NotFound/NotFound';
 import AboutUs from './components/AboutUs/AboutUs';
+import Login from './components/Login/Login';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
           </Route> */}
           <Route path="/about">
             <AboutUs></AboutUs> 
+          </Route>
+          <Route path="/login">
+            <Login></Login> 
           </Route>
           <Route path="*">
             <NotFound></NotFound> 
