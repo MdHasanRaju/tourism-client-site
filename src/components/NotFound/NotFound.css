@@ -1,0 +1,9 @@
+.error-page {
+    background-color: #F7F7F7;
+    background-image: url('../../images/404error2.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    padding: 200px 0px;
+}

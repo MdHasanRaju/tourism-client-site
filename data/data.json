@@ -1,0 +1,44 @@
+[
+	{
+		"key": "1",
+		"name": "Banderban",
+		"img": "https://image.freepik.com/free-photo/beautiful-tropical-beach-sea_74190-6772.jpg",
+		"price": "20",
+		"desc": "This is banderban"
+	},
+	{
+		"key": "2",
+		"name": "Rangamati",
+		"img": "https://image.freepik.com/free-photo/tourist-from-mountain-top-sun-rays-man-wear-big-backpack-against-sun-light_1150-9129.jpg",
+		"price": "18",
+		"desc": "This is rangamati"
+	},
+	{
+		"key": "3",
+		"name": "Sylhet",
+		"img": "https://image.freepik.com/free-photo/close-up-friends-walking-with-backpacks-woods-from-back_1150-2085.jpg",
+		"price": "15",
+		"desc": "This is sylhet"
+	},
+	{
+		"key": "4",
+		"name": "Khagra chori",
+		"img": "https://image.freepik.com/free-photo/happy-retired-woman-traditional-thai-dress-travel-temple_1150-18269.jpg",
+		"price": "Khagrachori",
+		"desc": "This is Khagrachori"
+	},
+	{
+		"key": "5",
+		"name": "Shitakundo",
+		"img": "https://image.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg",
+		"price": "12",
+		"desc": "this is shitokundo"
+	},
+	{
+		"key": "6",
+		"name": "Kua kata",
+		"img": "https://image.freepik.com/free-photo/beautiful-scenery-mongolian-wild-nature-landscape_181624-43788.jpg",
+		"price": "18",
+		"desc": "This is Kua kata"
+	}
+]
