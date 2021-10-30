@@ -11,6 +11,7 @@ const Service = ({service}) => {
           <div class="card-body">
             <h5 class="card-title">{name}</h5>
             <p class="card-text">{desc}</p>
+            <p class="card-text">${price}</p>
           </div>
           <Link to={`/serviceDetails/${key}`}>
             <button className="btn-primary ms-3 border-0 rounded-2 px-2">See Details</button>

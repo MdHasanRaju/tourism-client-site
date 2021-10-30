@@ -11,7 +11,7 @@ const Header = () => {
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
             <Link className="navbar-brand" to="/">
-              Navbar
+              Travel-World
             </Link>
             <button
               className="navbar-toggler"
@@ -55,6 +55,20 @@ const Header = () => {
                     </Link>
                   </li>
                 )}
+                {user?.displayName && (
+                  <li className="nav-item">
+                    <Link to="/manageOrders" className="nav-link">
+                      Manage Orders
+                    </Link>
+                  </li>
+                )}
+                {user?.displayName && (
+                  <li className="nav-item">
+                    <Link to="/addNewService" className="nav-link">
+                      Add A New Service
+                    </Link>
+                  </li>
+                )}
               </ul>
               <form className="d-flex">
                 {/* <input
@@ -65,9 +79,11 @@ const Header = () => {
                 /> */}
                 <small className="my-auto me-2">{user?.displayName}</small>
                 {user?.email ? (
-                  <button className="btn btn-outline-danger" onClick={logOut}>
-                    Log out
-                  </button>
+                  <Link to="/home">
+                    <button className="btn btn-outline-danger" onClick={logOut}>
+                      Log out
+                    </button>
+                  </Link>
                 ) : (
                   <button className="btn btn-outline-success" type="submit">
                     Search

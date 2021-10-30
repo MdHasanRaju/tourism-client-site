@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const ServiceDetails = () => {
     const {serviceId} = useParams();
     const [service, setService] = useState({});
-    console.log(serviceId)
+
+    const {user} = useAuth();
+    console.log(user);
 
     useEffect(() => {
         fetch("http://localhost:5000/products/")
@@ -18,17 +21,40 @@ const ServiceDetails = () => {
         })
     }, [])
 
+    const productName = service.name;
+    const productPrice = service.price;
+    const email = user?.email;
+    const userName = user?.displayName;
+    const orderDate = new Date();
+
+    const handleCheckIn = () => {
+    const orderDetails = {
+      productName,productPrice, email, orderDate, userName
+    };
+
+    fetch("http://localhost:5000/addUserOrder", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(orderDetails),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log(result)
+        if (result) {
+          alert("data has been uploaded");
+        }
+      });
+  }
+
     return (
       <div>
         <div class="card mx-auto" style={{ width: "18rem" }}>
           <img src={service.img} class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">{service.name}</h5>
-            <p class="card-text">Price: {service.price}</p>
+            <p class="card-text">Price: ${service.price}</p>
             <p class="card-text">{service?.desc?.slice(0, 150)}</p>
-            <Link class="btn btn-primary">
-              Place Order
-            </Link>
+              <button className="btn btn-primary" onClick={handleCheckIn}>Place order</button>
           </div>
         </div>
       </div>
