@@ -37,7 +37,7 @@ const useFirebase = () => {
         setIsLoading(true)
         signOut(auth)
         .then(() => {
-          // Sign-out successful.
+          setUser({})
         })
         .finally(() => setIsLoading(false))
     }

@@ -38,16 +38,23 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link to="/login" className="nav-link">
                     Login
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link to="/about" className="nav-link">
                     About us
                   </Link>
                 </li>
+                {user?.displayName && (
+                  <li className="nav-item">
+                    <Link to="/myOrders" className="nav-link">
+                      My Orders
+                    </Link>
+                  </li>
+                )}
               </ul>
               <form className="d-flex">
                 {/* <input
@@ -56,14 +63,16 @@ const Header = () => {
                   placeholder="Search"
                   aria-label="Search"
                 /> */}
-                <small>{user?.displayName}</small>
-                {
-                  user?.email ? <button onClick={logOut}>Log out</button>
-                  :
+                <small className="my-auto me-2">{user?.displayName}</small>
+                {user?.email ? (
+                  <button className="btn btn-outline-danger" onClick={logOut}>
+                    Log out
+                  </button>
+                ) : (
                   <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-                }
+                    Search
+                  </button>
+                )}
               </form>
             </div>
           </div>
