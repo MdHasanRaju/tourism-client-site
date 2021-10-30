@@ -5,7 +5,7 @@ const AboutUs = () => {
     return (
       <div>
         <section class="text-center about py-4">
-          <h1>About US</h1>
+          <h1>ABOUT US</h1>
           <div class="container">
             <div class="row">
               <div
@@ -13,12 +13,9 @@ const AboutUs = () => {
                 data-wow-offset="200"
               >
                 <span class="fa fa-group"></span>
-                <h2>Section 1</h2>
+                <h2>Our Commitment</h2>
                 <p class="lead">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled
+                  We ensure you that best travel and tour guide and services as well. Our teams are very sociable and co-operative.
                 </p>
               </div>
               <div
@@ -26,24 +23,19 @@ const AboutUs = () => {
                 data-wow-offset="200"
               >
                 <span class="fa fa-info"></span>
-                <h2>Section 2 </h2>
+                <h2>Target And Goal </h2>
                 <p class="lead">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum{" "}
+                  First of all, we are consistent with our Customers decisions. Our target is fixed like we always try to aid our customers properly.
                 </p>
               </div>
-              {/* <div class="clearfix visible-md-block visible-sm-block"></div> */}
               <div
                 class="col-lg-4  about-item wow lightSpeedIn"
                 data-wow-offset="200"
               >
                 <span class="fa fa-file"></span>
-                <h2>Section 3</h2>
+                <h2>Our Vibes</h2>
                 <p class="lead">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled
+                  Customers are our main instruments . So we are obliged to help them at any cost providing proper guidelines and we ensure cheap cost.
                 </p>
               </div>
             </div>

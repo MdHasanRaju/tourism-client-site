@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Service = ({service}) => {
     const {key, img, name, price, desc} = service;
 
-    
     return (
       <div class="col-lg-4 ">
         <div class="card h-100 p-4">
@@ -13,7 +12,7 @@ const Service = ({service}) => {
             <h5 class="card-title">{name}</h5>
             <p class="card-text">{desc}</p>
           </div>
-          <Link>
+          <Link to={`/serviceDetails:${key}`}>
             <button className="btn-primary ms-3 border-0 rounded-2 px-2">See Details</button>
           </Link>
         </div>
