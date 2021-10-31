@@ -7,7 +7,7 @@ const Features = () => {
           <h2 className="mb-5">WHY CHOOSE US?</h2>
           <div className="row g-4">
             <div className="col-lg-3">
-              <i class="fas fa-search-location fs-1"></i>
+              <i className="fas fa-search-location fs-1"></i>
               <h4>Diverse Destinations</h4>
               <p>
                 Diverse Destination is a young and energetic destination
@@ -15,7 +15,7 @@ const Features = () => {
               </p>
             </div>
             <div className="col-lg-3">
-              <i class="fas fa-umbrella-beach fs-1"></i>
+              <i className="fas fa-umbrella-beach fs-1"></i>
               <h4>Value for Money</h4>
               <p>
                 The optimum combination of whole-life cost and quality or
@@ -23,7 +23,7 @@ const Features = () => {
               </p>
             </div>
             <div className="col-lg-3">
-              <i class="fas fa-place-of-worship fs-1"></i>
+              <i className="fas fa-place-of-worship fs-1"></i>
               <h4>Beautiful Places</h4>
               <p>
                 Available eye-catching sceneric places. Come along with us and
@@ -31,7 +31,7 @@ const Features = () => {
               </p>
             </div>
             <div className="col-lg-3">
-              <i class="far fa-bookmark fs-1"></i>
+              <i className="far fa-bookmark fs-1"></i>
               <h4>Passionate Travel</h4>
               <p>
                 Welcome To Travel Passionate. Here only those Traveler join who is badly passionate about travelling. He/She must enjoy it.

@@ -2,7 +2,6 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import useAuth from '../../hooks/useAuth';
 
-
 const AddNewService = () => {
     const {user} = useAuth();
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -10,17 +9,17 @@ const AddNewService = () => {
     const onSubmit = data => {
         data.email = user?.email;
         console.log(data);
-        fetch("http://localhost:5000/addNewService", {
-            method:"POST",
-            headers:{
-                'content-type':"application/json"
-            },
-            body:JSON.stringify(data)
+        fetch("https://stormy-harbor-04955.herokuapp.com/addNewService", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(data),
         })
-        .then(res => res.json())
-        .then(result => {
-            console.log(result)
-        })
+          .then((res) => res.json())
+          .then((result) => {
+            console.log(result);
+          });
 
     };
     return (

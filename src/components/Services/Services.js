@@ -5,11 +5,11 @@ const Services = () => {
     const[products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
-        .then(res => res.json())
-        .then(data => {
+        fetch("https://stormy-harbor-04955.herokuapp.com/products")
+          .then((res) => res.json())
+          .then((data) => {
             setProducts(data);
-        })
+          });
     })
     return (
         <div>

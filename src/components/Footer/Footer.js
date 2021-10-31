@@ -3,7 +3,7 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-      <div className="pt-5 pb-2 footer text-dark">
+      <div className="pt-5 pb-2 footer text">
         <div className="container">
           <div className="row ">
             <div className="col-lg-3">
@@ -22,45 +22,45 @@ const Footer = () => {
             <div className="col-lg-3">
               <h5>INFORMATION</h5>
               <p>
-                <i class="fas fa-arrow-right"></i> Travel News
+                <i className="fas fa-arrow-right"></i> Travel News
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> About Us
+                <i className="fas fa-arrow-right"></i> About Us
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Privacy Policy
+                <i className="fas fa-arrow-right"></i> Privacy Policy
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Savings
+                <i className="fas fa-arrow-right"></i> Savings
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Contact Us
+                <i className="fas fa-arrow-right"></i> Contact Us
               </p>
             </div>
             <div className="col-lg-3">
               <h5>OUR MENU</h5>
               <p>
-                <i class="fas fa-arrow-right"></i> Home
+                <i className="fas fa-arrow-right"></i> Home
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Terms
+                <i className="fas fa-arrow-right"></i> Terms
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Offer
+                <i className="fas fa-arrow-right"></i> Offer
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Guides
+                <i className="fas fa-arrow-right"></i> Guides
               </p>
               <hr className="text-dark" />
               <p>
-                <i class="fas fa-arrow-right"></i> Career
+                <i className="fas fa-arrow-right"></i> Career
               </p>
             </div>
             <div className="col-lg-3">

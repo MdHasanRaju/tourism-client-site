@@ -11,14 +11,14 @@ const ServiceDetails = () => {
     console.log(user);
 
     useEffect(() => {
-        fetch("http://localhost:5000/products/")
-        .then(res => res.json())
-        .then(data => {
+        fetch("https://stormy-harbor-04955.herokuapp.com/products/")
+          .then((res) => res.json())
+          .then((data) => {
             // console.log(data)
-            const matchedItem = data?.find(item => item.key === serviceId);
+            const matchedItem = data?.find((item) => item.key === serviceId);
             setService(matchedItem);
-            console.log(service) 
-        })
+            console.log(service);
+          });
     }, [])
 
     const productName = service.name;
@@ -32,14 +32,14 @@ const ServiceDetails = () => {
       productName,productPrice, email, orderDate, userName
     };
 
-    fetch("http://localhost:5000/addUserOrder", {
+    fetch("https://stormy-harbor-04955.herokuapp.com/addUserOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(orderDetails),
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result)
+        console.log(result);
         if (result) {
           alert("data has been uploaded");
         }
@@ -47,8 +47,8 @@ const ServiceDetails = () => {
   }
 
     return (
-      <div>
-        <div class="card mx-auto" style={{ width: "18rem" }}>
+      <div className="my-5">
+        <div class="card mx-auto p-3" style={{ width: "18rem" }}>
           <img src={service.img} class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">{service.name}</h5>

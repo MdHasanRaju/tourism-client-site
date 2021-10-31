@@ -8,9 +8,9 @@ const Header = () => {
 
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg bg-dark text-light">
           <div className="container">
-            <Link className="navbar-brand" to="/">
+            <Link className="navbar-brand text-light" to="/">
               Travel-World
             </Link>
             <button
@@ -31,7 +31,7 @@ const Header = () => {
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <Link
-                    className="nav-link active"
+                    className="nav-link active text-light"
                     aria-current="page"
                     to="/home"
                   >
@@ -44,27 +44,27 @@ const Header = () => {
                   </Link>
                 </li> */}
                 <li className="nav-item">
-                  <Link to="/about" className="nav-link">
+                  <Link to="/about" className="nav-link text-light">
                     About us
                   </Link>
                 </li>
                 {user?.displayName && (
                   <li className="nav-item">
-                    <Link to="/myOrders" className="nav-link">
+                    <Link to="/myOrders" className="nav-link text-light">
                       My Orders
                     </Link>
                   </li>
                 )}
                 {user?.displayName && (
                   <li className="nav-item">
-                    <Link to="/manageOrders" className="nav-link">
+                    <Link to="/manageOrders" className="nav-link text-light">
                       Manage Orders
                     </Link>
                   </li>
                 )}
                 {user?.displayName && (
                   <li className="nav-item">
-                    <Link to="/addNewService" className="nav-link">
+                    <Link to="/addNewService" className="nav-link text-light">
                       Add A New Service
                     </Link>
                   </li>
@@ -85,9 +85,11 @@ const Header = () => {
                     </button>
                   </Link>
                 ) : (
-                  <button className="btn btn-outline-success" type="submit">
-                    Search
-                  </button>
+                  <Link to="/login">
+                    <button className="btn btn-outline-success" type="submit">
+                      Login
+                    </button>
+                  </Link>
                 )}
               </form>
             </div>
