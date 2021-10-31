@@ -1,10 +1,9 @@
 import React from 'react';
 import {useHistory, useLocation} from 'react-router';
 import useAuth from '../../hooks/useAuth';
-import useFirebase from '../../hooks/useFirebase';
 
 const Login = () => {
-    const {user,setUser, setError, handleGoogleSignIn, setIsLoading} = useAuth();
+    const {user, setUser, setError, handleGoogleSignIn, setIsLoading} = useAuth();
     const history = useHistory();
     const location = useLocation();
 

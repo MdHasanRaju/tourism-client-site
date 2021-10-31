@@ -2,8 +2,8 @@ import React from 'react';
 
 const ManageOrderDetails = (props) => {
     const {email,userEmail, productName,productPrice, _id, orderDate, userName, status} = props.manageOrders;
-    // console.log(props.manageOrders)
 
+    console.log(status)
 
     const handleStatus = (value, id) => {
         console.log(value, id)
@@ -54,8 +54,6 @@ const ManageOrderDetails = (props) => {
             {status !== "done" && (
               <button onClick={() => handleStatus("done", _id)}>done</button>
             )}
-
-              
           </td>
         </tr>
       </>

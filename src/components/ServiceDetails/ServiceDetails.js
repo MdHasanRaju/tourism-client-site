@@ -8,16 +8,13 @@ const ServiceDetails = () => {
     const [service, setService] = useState({});
 
     const {user} = useAuth();
-    console.log(user);
 
     useEffect(() => {
         fetch("https://stormy-harbor-04955.herokuapp.com/products/")
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data)
             const matchedItem = data?.find((item) => item.key === serviceId);
             setService(matchedItem);
-            console.log(service);
           });
     }, [])
 
@@ -39,9 +36,11 @@ const ServiceDetails = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
-        if (result) {
-          alert("data has been uploaded");
+        const proceed = window.confirm('Are you sure you want to add this package?')
+        if (proceed) {
+          if (result) {
+            alert("Order placed successfully");
+          }
         }
       });
   }

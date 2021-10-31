@@ -11,6 +11,7 @@ const ManageOrders = () => {
             setAllOrders(data);
           });
     }, [])
+    
     return (
       <div className="container">
         <h2>This Manage Orders</h2>

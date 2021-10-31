@@ -53,7 +53,7 @@ const MyOrderDetails = (props) => {
             <p>${productPrice}</p>
           </div>
           <div className="col-lg-2">
-            <p>{status}</p>
+            <p>{orderDate}</p>
           </div>
           <div className="col-lg-2">
             <button onClick={() => handleDelete(_id)}>Delete</button>
