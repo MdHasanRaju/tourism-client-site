@@ -47,6 +47,14 @@ const AddNewService = () => {
                 />
                 <br />
                 <input
+                  {...register("key")}
+                  placeholder="key"
+                  className="p-2 m-2"
+                  className="p-2 m-2 w-100"
+                  required
+                />
+                <br />
+                <input
                   type="number"
                   {...register("price")}
                   placeholder="cost$"

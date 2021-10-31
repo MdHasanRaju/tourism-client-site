@@ -1,33 +1,40 @@
 import React, { useState } from 'react';
 
 const MyOrderDetails = (props) => {
-    const {productName, productPrice, desc, email, userName, orderDate, _id} =props.myOrder;
-    console.log(props);
+    const {
+      productName,
+      productPrice,
+      desc,
+      email,
+      userName,
+      orderDate,
+      _id,
+      status,
+    } = props.myOrder;
 
-    const [control, setConrol] = useState(false);
+    console.log(status)
 
     const handleDelete = id => {
-      fetch(`http://localhost:5000/deleteService/${id}`, {
-        method:"DELETE",
-        headers:{
-          'content-type':'application/json'
-        }
+      fetch(`https://stormy-harbor-04955.herokuapp.com/deleteService/${id}`, {
+        method: "DELETE",
+        headers: {
+          "content-type": "application/json",
+        },
       })
-      .then(res => res.json())
-      .then(data => {
-        const proceed = window.confirm('Hey, are you sure you want ot delete?')
-        if (proceed) {
-          if (data.deletedCount > 0) {
-            alert('data deleted successfully');
-            console.log(data);
-            setConrol(!control);
+        .then((res) => res.json())
+        .then((data) => {
+          const proceed = window.confirm(
+            "Hey, are you sure you want ot delete?"
+          );
+          if (proceed) {
+            if (data.deletedCount > 0) {
+              alert("data deleted successfully");
+              console.log(data);
+              window.location.reload();
+            } else {
+            }
           }
-          else {
-             setConrol(false);
-          }
-        }
-      })
-
+        });
     }
 
     return (
@@ -46,13 +53,12 @@ const MyOrderDetails = (props) => {
             <p>${productPrice}</p>
           </div>
           <div className="col-lg-2">
-            <p>{orderDate}</p>
+            <p>{status}</p>
           </div>
           <div className="col-lg-2">
             <button onClick={() => handleDelete(_id)}>Delete</button>
           </div>
         </div>
-        
       </div>
     );
 };
