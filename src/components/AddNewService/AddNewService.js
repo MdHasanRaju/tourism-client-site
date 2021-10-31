@@ -23,31 +23,45 @@ const AddNewService = () => {
 
     };
     return (
-      <div>
-        <h1 className="mt-5 text-center text-warning">Please Add A New Service</h1>
-        <div className="login-box w-25 m-auto mt-5">
-          <div className="event-box border p-3 d-flex justify-content-center align-items-center">
+      <div className="my-5">
+        <h1 className="my-2 text-center text-warning">
+          Please Add A New Service
+        </h1>
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="border border-2 p-4 ">
             <div className="login-form">
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
-                  {...register("title")}
+                  {...register("name")}
                   placeholder="title"
                   className="p-2 m-2 w-100"
+                  required
                 />
                 <br />
                 <input
-                  {...register("description")}
-                  placeholder="Desc"
+                  {...register("desc")}
+                  placeholder="description"
                   className="p-2 m-2"
                   className="p-2 m-2 w-100"
+                  required
+                />
+                <br />
+                <input
+                  type="number"
+                  {...register("price")}
+                  placeholder="cost$"
+                  className="p-2 m-2"
+                  className="p-2 m-2 w-100"
+                  required
                 />
                 <br />
 
                 <input
-                  {...register("image", { required: true })}
+                  {...register("img", { required: true })}
                   placeholder="Image url"
                   className="p-2 m-2"
                   className="p-2 m-2 w-100"
+                  required
                 />
                 <br />
 

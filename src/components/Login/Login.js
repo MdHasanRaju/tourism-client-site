@@ -28,14 +28,14 @@ const Login = () => {
 
     return (
       <div className="text-center d-flex justify-content-center align-items-center my-5 ">
-        <div className="border border-secondary p-4">
+        <div className="border border-info p-4">
           <h2>Please Login</h2>
           <div>
             <button
               className="btn btn-primary border-0 rounded-1"
               onClick={handleGoogleLogin}
             >
-              Sign In With Google
+              <i className="fab fa-google text-white"></i> Sign In With Google
             </button>
           </div>
         </div>

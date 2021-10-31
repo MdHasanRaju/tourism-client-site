@@ -21,8 +21,8 @@ const ServiceDetails = () => {
           });
     }, [])
 
-    const productName = service.name;
-    const productPrice = service.price;
+    const productName = service?.name;
+    const productPrice = service?.price;
     const email = user?.email;
     const userName = user?.displayName;
     const orderDate = new Date();
@@ -49,10 +49,10 @@ const ServiceDetails = () => {
     return (
       <div className="my-5">
         <div class="card mx-auto p-3" style={{ width: "18rem" }}>
-          <img src={service.img} class="card-img-top" alt="..." />
+          <img src={service?.img} class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">{service.name}</h5>
-            <p class="card-text">Price: ${service.price}</p>
+            <h5 class="card-title">{service?.name}</h5>
+            <p class="card-text">Price: ${service?.price}</p>
             <p class="card-text">{service?.desc?.slice(0, 150)}</p>
               <button className="btn btn-primary" onClick={handleCheckIn}>Place order</button>
           </div>
