@@ -17,7 +17,7 @@ const ManageOrderDetails = (props) => {
         .then((res) => res.json())
         .then((data) => {
           if (data) {
-            alert("your data has been loaded");
+            alert("your data has been recorded");
           }
           console.log("update your data");
         })
