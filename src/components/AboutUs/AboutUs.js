@@ -3,8 +3,8 @@ import './AboutUs.css';
 
 const AboutUs = () => {
     return (
-      <div>
-        <section class="text-center about py-4">
+      <div className=''>
+        <section class="text-center about">
           <h1>ABOUT US</h1>
           <div class="container">
             <div class="row">

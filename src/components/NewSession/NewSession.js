@@ -1,11 +1,10 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import "./NewSession.css";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
 const NewSession = () => {
   const [focus, setFocus] = useState(false);
-  
 
   return (
     <div className="session">
@@ -35,14 +34,13 @@ const NewSession = () => {
                   </div>
                 )}
               </CountUp> */}
- <CountUp end={47} redraw={true}>
-        {({ countUpRef, start }) => (
-            <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-            </VisibilitySensor>
-        )}
-    </CountUp>
-              
+              <CountUp end={47} redraw={true}>
+                {({ countUpRef, start }) => (
+                  <VisibilitySensor onChange={start} delayedCall>
+                    <span ref={countUpRef} />
+                  </VisibilitySensor>
+                )}
+              </CountUp>
             </h2>
             <p className="text-danger">Days</p>
           </div>
@@ -68,13 +66,14 @@ const NewSession = () => {
                     </VisibilitySensor>
                   </div>
                 )}
-              </CountUp> */} <CountUp end={35} redraw={true}>
-        {({ countUpRef, start }) => (
-            <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-            </VisibilitySensor>
-        )}
-    </CountUp>
+              </CountUp> */}{" "}
+              <CountUp end={35} redraw={true}>
+                {({ countUpRef, start }) => (
+                  <VisibilitySensor onChange={start} delayedCall>
+                    <span ref={countUpRef} />
+                  </VisibilitySensor>
+                )}
+              </CountUp>
             </h2>
             <p className="text-danger">Hours</p>
           </div>
@@ -100,13 +99,14 @@ const NewSession = () => {
                     </VisibilitySensor>
                   </div>
                 )}
-              </CountUp> */} <CountUp end={27} redraw={true}>
-        {({ countUpRef, start }) => (
-            <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-            </VisibilitySensor>
-        )}
-    </CountUp>
+              </CountUp> */}{" "}
+              <CountUp end={27} redraw={true}>
+                {({ countUpRef, start }) => (
+                  <VisibilitySensor onChange={start} delayedCall>
+                    <span ref={countUpRef} />
+                  </VisibilitySensor>
+                )}
+              </CountUp>
             </h2>
             <p className="text-danger">Minutes</p>
           </div>
@@ -133,13 +133,13 @@ const NewSession = () => {
                   </div>
                 )}
               </CountUp> */}
-               <CountUp end={59} redraw={true}>
-        {({ countUpRef, start }) => (
-            <VisibilitySensor onChange={start} delayedCall>
-                <span ref={countUpRef} />
-            </VisibilitySensor>
-        )}
-    </CountUp>
+              <CountUp end={59} redraw={true}>
+                {({ countUpRef, start }) => (
+                  <VisibilitySensor onChange={start} delayedCall>
+                    <span ref={countUpRef} />
+                  </VisibilitySensor>
+                )}
+              </CountUp>
             </h2>
             <p className="text-danger">Seconds</p>
           </div>
