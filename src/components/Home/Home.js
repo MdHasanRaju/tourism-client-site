@@ -4,13 +4,15 @@ import Features from '../Features/Features';
 import NewSession from '../NewSession/NewSession';
 import Services from '../Services/Services';
 
+// to get the time we should go to timestamp epoch converter website and need to convert it into milliseconds
+
 const Home = () => {
     return (
       <div>
         <Banner></Banner>
         <Services></Services>
         <Features></Features>
-        <NewSession></NewSession>
+        <NewSession countdownTimestampMs={1648379849000}></NewSession>
       </div>
     );
 };
