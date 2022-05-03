@@ -28,9 +28,9 @@ const NewSession = ({countdownTimestampMs}) => {
   }
 
   return (
-    <div className="session">
+    <div className="session ">
       <div className="container text-center">
-        <h2 className="text-warning mb-5">NEW ADVENTURES BEGIN IN</h2>
+        <h2 className="text-primary-clr mb-5">NEW ADVENTURES BEGIN IN</h2>
         <div className="d-flex justify-content-evenly align-items-center">
           <div>
             <h2 className="fs-1 text-light">
@@ -70,7 +70,7 @@ const NewSession = ({countdownTimestampMs}) => {
 
               {/* timer for counting days-start*/}
             </h2>
-            <p className="text-danger">Days</p>
+            <p className="text-second-clr">Days</p>
           </div>
           <div>
             <h2 className="fs-1 text-light">
@@ -106,7 +106,7 @@ const NewSession = ({countdownTimestampMs}) => {
                 )}
               </CountUp> */}
             </h2>
-            <p className="text-danger">Hours</p>
+            <p className="text-second-clr">Hours</p>
           </div>
           <div>
             <h2 className="fs-1 text-light">
@@ -142,7 +142,7 @@ const NewSession = ({countdownTimestampMs}) => {
                 )}
               </CountUp> */}
             </h2>
-            <p className="text-danger">Minutes</p>
+            <p className="text-second-clr">Minutes</p>
           </div>
           <div>
             <h2 className="fs-1 text-light">
@@ -180,7 +180,7 @@ const NewSession = ({countdownTimestampMs}) => {
                 )}
               </CountUp> */}
             </h2>
-            <p className="text-danger">Seconds</p>
+            <p className="text-second-clr">Seconds</p>
           </div>
         </div>
       </div>

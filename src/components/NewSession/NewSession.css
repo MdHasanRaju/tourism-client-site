@@ -1,7 +1,15 @@
 .session{
-    background-image: url('../../images/poster2.jpg');
+    background-image: url('../../images/home4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 160px 0px;
+}
+
+.text-primary-clr{
+    color: rgb(243, 14, 213) !important;
+}
+.text-second-clr{
+    color: rgba(251, 7, 133, 0.829) !important;
+    font-weight: 600;
 }

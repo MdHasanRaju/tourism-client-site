@@ -12,7 +12,7 @@ const Home = () => {
         <Banner></Banner>
         <Services></Services>
         <Features></Features>
-        <NewSession countdownTimestampMs={1648379849000}></NewSession>
+        <NewSession countdownTimestampMs={1664042400000}></NewSession>
       </div>
     );
 };

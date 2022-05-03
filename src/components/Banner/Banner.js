@@ -1,7 +1,7 @@
 import React from "react";
-import banner1 from "../../images/banner1.jpg";
-import banner2 from "../../images/banner2.jpg";
-import banner3 from "../../images/banner3.jpg";
+import banner2 from "../../images/home2.jpg";
+import banner3 from "../../images/home3.jpg";
+import banner1 from "../../images/home1.jpg";
 
 const Banner = () => {
   return (
@@ -36,7 +36,7 @@ const Banner = () => {
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src={banner3} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-dark">
+            <div class="carousel-caption d-none d-md-block text-light">
               <h3>Spare Natural Time</h3>
               <p>
                 Nature can heal you when you are out of mind...Come and enjoy
@@ -45,17 +45,17 @@ const Banner = () => {
           </div>
           <div class="carousel-item">
             <img src={banner1} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-dark">
-              <h3>Remove your anxiety With Travelling</h3>
+            <div class="carousel-caption d-none d-md-block text-light">
+              <h3>Remove your anxiety With Traveling</h3>
               <p>
-                Travelling makes your more confident and cheerful. Go along with
+                Traveling makes your more confident and cheerful. Go along with
                 it...
               </p>
             </div>
           </div>
           <div class="carousel-item">
             <img src={banner2} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-dark">
+            <div class="carousel-caption d-none d-md-block text-light">
               <h3>Most Eye-Catching sceneries are here.</h3>
               <p>
                 Get connected with the natural beauty and eliminate all of
