@@ -24,7 +24,7 @@ const AddNewService = () => {
     };
     return (
       <div className="my-5">
-        <h1 className="my-2 text-center text-warning">
+        <h1 className="my-2 text-center text-primary-clr">
           Please Add A New Service
         </h1>
         <div className="d-flex justify-content-center align-items-center">
@@ -41,7 +41,6 @@ const AddNewService = () => {
                 <input
                   {...register("desc")}
                   placeholder="description"
-                  className="p-2 m-2"
                   className="p-2 m-2 w-100"
                   required
                 />
@@ -49,7 +48,6 @@ const AddNewService = () => {
                 <input
                   {...register("key")}
                   placeholder="key"
-                  className="p-2 m-2"
                   className="p-2 m-2 w-100"
                   required
                 />
@@ -58,7 +56,6 @@ const AddNewService = () => {
                   type="number"
                   {...register("price")}
                   placeholder="cost$"
-                  className="p-2 m-2"
                   className="p-2 m-2 w-100"
                   required
                 />
@@ -67,7 +64,6 @@ const AddNewService = () => {
                 <input
                   {...register("img", { required: true })}
                   placeholder="Image url"
-                  className="p-2 m-2"
                   className="p-2 m-2 w-100"
                   required
                 />
@@ -78,7 +74,7 @@ const AddNewService = () => {
                 <input
                   type="submit"
                   value="Add"
-                  className="btn btn-success ms-2 w-50"
+                  className="btn btn-clr text-white ms-2 w-50"
                 />
               </form>
             </div>

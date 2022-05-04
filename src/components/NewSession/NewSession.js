@@ -30,10 +30,10 @@ const NewSession = ({countdownTimestampMs}) => {
   return (
     <div className="session ">
       <div className="container text-center">
-        <h2 className="text-primary-clr mb-5">NEW ADVENTURES BEGIN IN</h2>
+        <h2 className=" text-light mb-5">NEW ADVENTURES BEGIN IN</h2>
         <div className="d-flex justify-content-evenly align-items-center">
           <div>
-            <h2 className="fs-1 text-light">
+            <h2 className="fs-1 text-second-clr ">
               {remainingTime.days}
 
               {/* only for first time display after loading the page-start */}
@@ -70,10 +70,10 @@ const NewSession = ({countdownTimestampMs}) => {
 
               {/* timer for counting days-start*/}
             </h2>
-            <p className="text-second-clr">Days</p>
+            <p className="text-light">Days</p>
           </div>
           <div>
-            <h2 className="fs-1 text-light">
+            <h2 className="fs-1 text-second-clr">
               {remainingTime.hours}
               {/* only for first time display after loading the page-start */}
               {/* <CountUp
@@ -106,10 +106,10 @@ const NewSession = ({countdownTimestampMs}) => {
                 )}
               </CountUp> */}
             </h2>
-            <p className="text-second-clr">Hours</p>
+            <p className="text-light">Hours</p>
           </div>
           <div>
-            <h2 className="fs-1 text-light">
+            <h2 className="fs-1 text-second-clr">
               {remainingTime.minutes}
               {/* only for first time display after loading the page-start */}
               {/* <CountUp
@@ -142,10 +142,10 @@ const NewSession = ({countdownTimestampMs}) => {
                 )}
               </CountUp> */}
             </h2>
-            <p className="text-second-clr">Minutes</p>
+            <p className="text-light">Minutes</p>
           </div>
           <div>
-            <h2 className="fs-1 text-light">
+            <h2 className="fs-1 text-second-clr">
               {remainingTime.seconds}
 
               {/* only for first time display after loading the page-start*/}
@@ -180,7 +180,7 @@ const NewSession = ({countdownTimestampMs}) => {
                 )}
               </CountUp> */}
             </h2>
-            <p className="text-second-clr">Seconds</p>
+            <p className="text-light">Seconds</p>
           </div>
         </div>
       </div>

@@ -1,0 +1,9 @@
+.price-clr{
+    color: #40c1b9;
+    font-weight: 900;
+    font-size: 20px;
+}
+.btn-clr{
+    background-color: rgba(251, 7, 133, 0.829) !important;
+    font-weight: 600;
+}

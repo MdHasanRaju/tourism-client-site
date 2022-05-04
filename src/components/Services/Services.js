@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Service from '../Service/Service';
 
+
 const Services = () => {
     const[products, setProducts] = useState([]);
 
@@ -16,7 +17,7 @@ const Services = () => {
       <div className='my-5'>
         {products?.length === 0 ? (
           <div className="d-flex justify-content-center">
-            <div class="spinner-border text-success" role="status">
+            <div class="spinner-border text-danger" role="status">
               <span class="visually-hidden">Loading...</span>
             </div>
           </div>

@@ -13,22 +13,24 @@ const ManageOrders = () => {
     }, [])
     
     return (
-      <div className="container">
-        <h2>This Manage Orders</h2>
-        <table class="table">
-          <thead>
+      <div className="container table-responsive my-5">
+        <h2>Manage All Orders</h2>
+        <table className="table table-bordered">
+          <thead class="table-danger">
             <tr>
               <th scope="col">User</th>
               <th scope="col">Email</th>
               <th scope="col">Package Name</th>
               <th scope="col">Price</th>
               <th scope="col">Date</th>
-              <th scope="col">Status</th>
+              <th scope="col">Options</th>
             </tr>
           </thead>
           <tbody>
             {allOrders.map((order) => (
               <ManageOrderDetails
+              allOrders={allOrders}
+              setAllOrders={setAllOrders}
                 key={order._id}
                 manageOrders={order}
               ></ManageOrderDetails>

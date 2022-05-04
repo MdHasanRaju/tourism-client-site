@@ -31,7 +31,7 @@ const Login = () => {
           <h2>Please Login</h2>
           <div>
             <button
-              className="btn btn-primary border-0 rounded-1"
+              className="btn btn-clr text-white border-0 rounded-1"
               onClick={handleGoogleLogin}
             >
               <i className="fab fa-google text-white"></i> Sign In With Google
