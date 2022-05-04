@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import useAuth from '../../hooks/useAuth';
 
 const ServiceDetails = () => {
@@ -20,13 +21,14 @@ const ServiceDetails = () => {
 
     const productName = service?.name;
     const productPrice = service?.price;
+    const status = 'pending';
     const email = user?.email;
     const userName = user?.displayName;
     const orderDate = new Date();
 
     const handleCheckIn = () => {
     const orderDetails = {
-      productName,productPrice, email, orderDate, userName
+      productName,productPrice, email, orderDate, userName, status
     };
 
     fetch("https://stormy-harbor-04955.herokuapp.com/addUserOrder", {
@@ -36,24 +38,22 @@ const ServiceDetails = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        const proceed = window.confirm('Are you sure you want to add this package?')
-        if (proceed) {
           if (result) {
-            alert("Order placed successfully");
+            toast.success("Order placed successfully",{autoClose:1500});
           }
-        }
       });
   }
 
     return (
       <div className="my-5">
-        <div class="card mx-auto p-3" style={{ width: "18rem" }}>
+        <div class="card mx-auto p-3 text-start" style={{ maxWidth: '25rem' }}>
           <img src={service?.img} class="card-img-top" alt="..." />
           <div class="card-body">
             <h5 class="card-title">{service?.name}</h5>
-            <p class="card-text">Price: ${service?.price}</p>
+            <p class="card-text ">Price: ${service?.price}</p>
             <p class="card-text">{service?.desc?.slice(0, 150)}</p>
-              <button className="btn btn-primary" onClick={handleCheckIn}>Place order</button>
+              <button className="btn btn-clr text-white" onClick={handleCheckIn}>Place order</button>
+              <ToastContainer/>
           </div>
         </div>
       </div>

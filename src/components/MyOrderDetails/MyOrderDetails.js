@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const MyOrderDetails = (props) => {
   const {userDetails, setUserDetails} = props;
@@ -14,8 +15,6 @@ const MyOrderDetails = (props) => {
     status,
   } = props.myOrder;
 
-  console.log(status);
-
   const handleDelete = (id) => {
     fetch(`https://stormy-harbor-04955.herokuapp.com/deleteService/${id}`, {
       method: "DELETE",
@@ -25,42 +24,21 @@ const MyOrderDetails = (props) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        const proceed = window.confirm("Hey, are you sure you want ot delete?");
-        if (proceed) {
           if (data.deletedCount > 0) {
-            alert("data deleted successfully");
+            toast.success("data deleted successfully!",{autoClose:1500});
             const newData = userDetails.filter(ud => ud._id !== id);
             setUserDetails(newData)
           } else {
+            toast.error('Opp! something went wrong',{autoClose:1500})
           }
-        }
+        
       });
   };
 
   return (
     <>
-      {/* <div className="row text-center w-100">
-          <div className="col-lg-2">
-            <p>{_id}</p>
-          </div>
-          <div className="col-lg-2">
-            <p>{productName}</p>
-          </div>
-          <div className="col-lg-2">
-            <p>{email}</p>
-          </div>
-          <div className="col-lg-2">
-            <p>${productPrice}</p>
-          </div>
-          <div className="col-lg-2">
-            <p>{orderDate}</p>
-          </div>
-          <div className="col-lg-2">
-            <button onClick={() => handleDelete(_id)}>Delete</button>
-          </div>
-        </div> */}
       <tr>
-        
+        <td className="fs-5">{userName ? userName:'not found'}</td>
         <td className="fs-5">{productName}</td>
         <td className="fs-5">{email}</td>
         <td className="fs-5">${productPrice}</td>
@@ -68,6 +46,7 @@ const MyOrderDetails = (props) => {
         <td className="fs-5">{status?status:'null'}</td>
         <td className="fs-5">
           <button title="Delete" className="btn btn-link text-danger" onClick={() => handleDelete(_id)}><i class="fa-solid fa-trash"></i></button>
+          <ToastContainer/>
         </td>
       </tr>
     </>

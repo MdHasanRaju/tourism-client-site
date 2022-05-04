@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 const Footer = () => {
     return (
       <div className="pt-5 pb-2 footer text">
-          <ScrollToTop smooth top="2000" color='cyan'/>
+          <ScrollToTop smooth top="500" backgroundColor='black!important' color='red'/>
         <div className="container">
           <div className="row ">
             <div className="col-lg-3">

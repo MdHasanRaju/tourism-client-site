@@ -1,7 +1,9 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ManageOrderDetails = (props) => {
-  const {allOrders,setAllOrders} = props;
+  const { allOrders, setAllOrders, isStatus, setIsStatus } = props;
   const {
     email,
     userEmail,
@@ -12,8 +14,6 @@ const ManageOrderDetails = (props) => {
     userName,
     status,
   } = props.manageOrders;
-
-  
 
   const handleStatus = (value, id) => {
     console.log(value, id);
@@ -27,15 +27,16 @@ const ManageOrderDetails = (props) => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          alert("your data has been recorded");
+          setIsStatus(true)
+          toast.success("Status updated successfully!", {autoClose:1400});
         }
+        setIsStatus(false)
         // const updatedData = allOrders.filter(order => order._id !== id)
         // setAllOrders(updatedData);
-        console.log(data);
-        console.log(status);
       })
       .catch((error) => {
-        console.log(error);
+        toast.error('Something went wrong!',{autoClose:1400})
+        setIsStatus(false);
       });
   };
 
@@ -50,20 +51,28 @@ const ManageOrderDetails = (props) => {
         <td>{productName}</td>
         <td>${productPrice}</td>
         <td>{orderDate?.slice(0, 10)}</td>
+        <td>{status}</td>
         <td>
-          {status !== "pending" && (
+          {/* {status !== "pending" && (
             <button className="btn btn-dark ms-1"  onClick={() => handleStatus("pending", _id)}>
               Pending
             </button>
-          )}
-          {status !== "ongoing" && (
-            <button  className="btn btn-dark ms-1" onClick={() => handleStatus("ongoing", _id)}>
-              Ongoing
-            </button>
-          )}
-          {status !== "done" && (
-            <button  className="btn btn-dark ms-1"  onClick={() => handleStatus("done", _id)}>Done</button>
-          )}
+          )} */}
+
+          <button
+            className="btn btn-dark m-1"
+            onClick={() => handleStatus("approved", _id)}
+          >
+            Approved
+          </button>
+
+          <button
+            className="btn btn-dark "
+            onClick={() => handleStatus("done", _id)}
+          >
+            Done
+          </button>
+          <ToastContainer />
         </td>
       </tr>
     </>
