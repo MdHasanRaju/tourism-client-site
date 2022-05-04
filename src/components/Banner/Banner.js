@@ -8,15 +8,15 @@ const Banner = () => {
     <div>
       <div
         id="carouselExampleCaptions"
-        class="carousel slide"
+        className="carousel slide"
         data-bs-ride="carousel"
       >
-        <div class="carousel-indicators">
+        <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -33,19 +33,19 @@ const Banner = () => {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src={banner3} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-light">
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img src={banner3} className="d-block w-100" alt="..." />
+            <div className="carousel-caption d-none d-md-block text-light">
               <h3>Spare Natural Time</h3>
               <p>
                 Nature can heal you when you are out of mind...Come and enjoy
               </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src={banner1} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-light">
+          <div className="carousel-item">
+            <img src={banner1} className="d-block w-100" alt="..." />
+            <div className="carousel-caption d-none d-md-block text-light">
               <h3>Remove your anxiety With Traveling</h3>
               <p>
                 Traveling makes your more confident and cheerful. Go along with
@@ -53,9 +53,9 @@ const Banner = () => {
               </p>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src={banner2} class="d-block w-100" alt="..." />
-            <div class="carousel-caption d-none d-md-block text-light">
+          <div className="carousel-item">
+            <img src={banner2} className="d-block w-100" alt="..." />
+            <div className="carousel-caption d-none d-md-block text-light">
               <h3>Most Eye-Catching sceneries are here.</h3>
               <p>
                 Get connected with the natural beauty and eliminate all of
@@ -65,22 +65,22 @@ const Banner = () => {
           </div>
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </div>

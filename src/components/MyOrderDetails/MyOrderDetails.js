@@ -45,7 +45,7 @@ const MyOrderDetails = (props) => {
         <td className="fs-5">{orderDate.slice(0, 10)}</td>
         <td className="fs-5">{status?status:'null'}</td>
         <td className="fs-5">
-          <button title="Delete" className="btn btn-link text-danger" onClick={() => handleDelete(_id)}><i class="fa-solid fa-trash"></i></button>
+          <button title="Delete" className="btn btn-link text-danger" onClick={() => handleDelete(_id)}><i className="fa-solid fa-trash"></i></button>
           <ToastContainer/>
         </td>
       </tr>

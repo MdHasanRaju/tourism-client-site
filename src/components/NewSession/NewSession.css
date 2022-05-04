@@ -7,9 +7,10 @@
 }
 
 .text-primary-clr{
-    color: rgb(243, 14, 213) !important;
+    color: rgba(224, 8, 196, 0.93) !important;
+    /* color: #DA4453 !important; */
 }
 .text-second-clr{
-    color: rgba(251, 7, 133, 0.829) !important;
+    color: rgba(226, 17, 125, 0.829) !important;
     font-weight: 600;
 }

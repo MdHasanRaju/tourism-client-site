@@ -46,12 +46,12 @@ const ServiceDetails = () => {
 
     return (
       <div className="my-5">
-        <div class="card mx-auto p-3 text-start" style={{ maxWidth: '25rem' }}>
-          <img src={service?.img} class="card-img-top" alt="..." />
-          <div class="card-body">
-            <h5 class="card-title">{service?.name}</h5>
-            <p class="card-text ">Price: ${service?.price}</p>
-            <p class="card-text">{service?.desc?.slice(0, 150)}</p>
+        <div className="card mx-auto p-3 text-start" style={{ maxWidth: '25rem' }}>
+          <img src={service?.img} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">{service?.name}</h5>
+            <p className="card-text ">Price: ${service?.price}</p>
+            <p className="card-text">{service?.desc?.slice(0, 150)}</p>
               <button className="btn btn-clr text-white" onClick={handleCheckIn}>Place order</button>
               <ToastContainer/>
           </div>

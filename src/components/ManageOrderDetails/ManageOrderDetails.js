@@ -60,14 +60,14 @@ const ManageOrderDetails = (props) => {
           )} */}
 
           <button
-            className="btn btn-dark m-1"
+            className="btn btn-clr text-white m-1"
             onClick={() => handleStatus("approved", _id)}
           >
             Approved
           </button>
 
           <button
-            className="btn btn-dark "
+            className="btn btn-clr text-white "
             onClick={() => handleStatus("done", _id)}
           >
             Done

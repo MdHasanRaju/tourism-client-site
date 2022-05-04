@@ -21,8 +21,8 @@ const MyOrders = () => {
     <div className="my-5">
       <h2 className="text-center mb-4">My Orders</h2>
       {!userDetails?.length ? (
-        <div class="spinner-grow text-danger" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div className="spinner-grow text-danger" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
       ) : (
         <div className="container table-responsive">
@@ -53,7 +53,7 @@ const MyOrders = () => {
           myOrder={ud}></MyOrderDetails>
         ))} */}
 
-          <table class="table table-bordered" style={{ overflowX: "scroll" }}>
+          <table className="table table-bordered" style={{ overflowX: "scroll" }}>
             <thead>
               <tr>
                 <th className="fs4" scope="col">
@@ -81,9 +81,8 @@ const MyOrders = () => {
             </thead>
 
             <tbody>
-              {userDetails.map((item, index) => (
+              {userDetails?.map((item) => (
                 <MyOrderDetails
-                  index
                   setUserDetails={setUserDetails}
                   userDetails={userDetails}
                   key={item._id}

@@ -17,13 +17,13 @@ const Services = () => {
       <div className='my-5'>
         {products?.length === 0 ? (
           <div className="d-flex justify-content-center">
-            <div class="spinner-border text-danger" role="status">
-              <span class="visually-hidden">Loading...</span>
+            <div className="spinner-border text-danger" role="status">
+              <span className="visually-hidden">Loading...</span>
             </div>
           </div>
         ) : (
           <div>
-            <h2 className="text-center">Our <span className='text-primary-clr'>Services</span>: {products?.length}</h2>
+            <h2 className="text-center ">OUR <span className='text-primary-clr '>SERVICES</span></h2>
             <div className="row g-3">
               {products.map((product) => (
                 <Service key={product.key} service={product}></Service>

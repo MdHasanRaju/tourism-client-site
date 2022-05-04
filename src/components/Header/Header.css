@@ -1,4 +1,8 @@
 
 .nav-bg{
-    background: rgb(233, 20, 205);
+    /* background: rgb(233, 20, 205); */
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+    /* background: linear-gradient(to right, #ff0099, #493240);
+    background: linear-gradient(to right, #f953c6, #b91d73); */
+
 }
