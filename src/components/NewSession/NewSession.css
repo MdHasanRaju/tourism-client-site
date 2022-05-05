@@ -6,11 +6,11 @@
     padding: 160px 0px;
 }
 
-.text-primary-clr{
+.primary-color{
     color: rgba(224, 8, 196, 0.93) !important;
     /* color: #DA4453 !important; */
 }
-.text-second-clr{
+.secondary-color{
     color: rgba(226, 17, 125, 0.829) !important;
     font-weight: 600;
 }

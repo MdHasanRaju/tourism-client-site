@@ -30,10 +30,10 @@ const NewSession = ({countdownTimestampMs}) => {
   return (
     <div className="session ">
       <div className="container text-center">
-        <h2 className=" text-light mb-5">NEW ADVENTURES BEGIN IN</h2>
+        <h2 className=" text-light mb-5">NEW <span>ADVENTURES</span> BEGIN IN</h2>
         <div className="d-flex justify-content-evenly align-items-center">
           <div>
-            <h2 className="fs-1 text-second-clr ">
+            <h2 className="fs-1 secondary-color ">
               {remainingTime.days}
 
               {/* only for first time display after loading the page-start */}
@@ -73,7 +73,7 @@ const NewSession = ({countdownTimestampMs}) => {
             <p className="text-light">Days</p>
           </div>
           <div>
-            <h2 className="fs-1 text-second-clr">
+            <h2 className="fs-1 secondary-color">
               {remainingTime.hours}
               {/* only for first time display after loading the page-start */}
               {/* <CountUp
@@ -109,7 +109,7 @@ const NewSession = ({countdownTimestampMs}) => {
             <p className="text-light">Hours</p>
           </div>
           <div>
-            <h2 className="fs-1 text-second-clr">
+            <h2 className="fs-1 secondary-color">
               {remainingTime.minutes}
               {/* only for first time display after loading the page-start */}
               {/* <CountUp
@@ -145,7 +145,7 @@ const NewSession = ({countdownTimestampMs}) => {
             <p className="text-light">Minutes</p>
           </div>
           <div>
-            <h2 className="fs-1 text-second-clr">
+            <h2 className="fs-1 secondary-color">
               {remainingTime.seconds}
 
               {/* only for first time display after loading the page-start*/}

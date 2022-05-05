@@ -13,9 +13,8 @@ const MyOrders = () => {
       .then((res) => res.json())
       .then((data) => {
         setUserDetails(data);
-        console.log(data);
       });
-  }, []);
+  }, [user?.email]);
 
   return (
     <div className="my-5">
@@ -26,33 +25,6 @@ const MyOrders = () => {
         </div>
       ) : (
         <div className="container table-responsive">
-          {/* <div className="row text-center w-100">
-          <div className="col-lg-2">
-            <h5>Order</h5>
-          </div>
-          <div className="col-lg-2">
-            <h5>Product package</h5>
-          </div>
-          <div className="col-lg-2">
-            <h5>Customer</h5>
-          </div>
-          <div className="col-lg-2">
-            <h5>Price</h5>
-          </div>
-          <div className="col-lg-2">
-            <h5>date</h5>
-          </div>
-          <div className="col-lg-2">
-            <h5>Options</h5>
-          </div>
-        </div>
-        <hr className="mt-0 w-100 bg-dark text-danger" /> */}
-          {/* {userDetails.map((ud) => (
-          <MyOrderDetails 
-          key={ud._id}
-          myOrder={ud}></MyOrderDetails>
-        ))} */}
-
           <table className="table table-bordered" style={{ overflowX: "scroll" }}>
             <thead>
               <tr>
@@ -81,11 +53,11 @@ const MyOrders = () => {
             </thead>
 
             <tbody>
-              {userDetails?.map((item) => (
+              {userDetails?.map((item, index) => (
                 <MyOrderDetails
                   setUserDetails={setUserDetails}
                   userDetails={userDetails}
-                  key={item._id}
+                  key={index}
                   myOrder={item}
                 ></MyOrderDetails>
 

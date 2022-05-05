@@ -4,7 +4,7 @@ const Features = () => {
     return (
       <div className="text-center my-5">
         <div className="container py-4">
-          <h2 className="mb-5">WHY <span className='text-primary-clr'>CHOOSE</span> US?</h2>
+          <h2 className="mb-5">WHY <span className='primary-color'>CHOOSE</span> US?</h2>
           <div className="row g-4">
             <div className="col-lg-3">
               <i className="fas fa-search-location fs-1 mb-4" style={{color:'rgba(251, 7, 133, 0.829)'}}></i>

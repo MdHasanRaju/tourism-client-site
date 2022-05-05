@@ -52,7 +52,7 @@ const ServiceDetails = () => {
             <h5 className="card-title">{service?.name}</h5>
             <p className="card-text ">Price: ${service?.price}</p>
             <p className="card-text">{service?.desc?.slice(0, 150)}</p>
-              <button className="btn btn-clr text-white" onClick={handleCheckIn}>Place order</button>
+              <button className="btn button-color text-white" onClick={handleCheckIn}>Place order</button>
               <ToastContainer/>
           </div>
         </div>

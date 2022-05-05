@@ -8,13 +8,12 @@ const AddNewService = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
+    let unmounted = false;
     data.email = user?.email;
-    console.log(data);
     fetch("https://stormy-harbor-04955.herokuapp.com/addNewService", {
       method: "POST",
       headers: {
@@ -24,15 +23,23 @@ const AddNewService = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
-        if (result.insertedId) {
-          toast.success("New Service Added Successfully", { autoClose: 1300 });
+        try {
+          if (result.insertedId && !unmounted) {
+            toast.success("New Service Added Successfully", { autoClose: 1300 });
+          }
+        } catch (error ) {
+          if (!unmounted) {
+            toast.error(error)
+          }
         }
+        
+
       });
+      return () =>  { unmounted = true };
   };
   return (
     <div className="my-5">
-      <h1 className="my-2 text-center text-primary-clr">
+      <h1 className="my-2 text-center primary-color">
         Please Add A New Service
       </h1>
       <div className="d-flex justify-content-center align-items-center">
@@ -82,7 +89,7 @@ const AddNewService = () => {
               <input
                 type="submit"
                 value="Add"
-                className="btn btn-clr text-white ms-2 w-50"
+                className="btn button-color text-white ms-2 w-50"
               />
               <ToastContainer/>
             </form>

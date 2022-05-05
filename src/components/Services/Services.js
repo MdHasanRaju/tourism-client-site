@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import Service from '../Service/Service';
 
 
@@ -6,10 +7,20 @@ const Services = () => {
     const[products, setProducts] = useState([]);
 
     useEffect(() => {
+      let unmounted = false;
         fetch("https://stormy-harbor-04955.herokuapp.com/products")
           .then((res) => res.json())
           .then((data) => {
-            setProducts(data);
+            try {
+              if (data && !unmounted) {
+                setProducts(data);
+              }
+            } catch (error) {
+              if (!unmounted) {
+                toast.error(error)
+              }
+            }
+            return () => {unmounted = true};
           });
     })
     
@@ -23,10 +34,10 @@ const Services = () => {
           </div>
         ) : (
           <div>
-            <h2 className="text-center ">OUR <span className='text-primary-clr '>SERVICES</span></h2>
+            <h2 className="text-center ">OUR <span className='primary-color '>SERVICES</span></h2>
             <div className="row g-3">
-              {products.map((product) => (
-                <Service key={product.key} service={product}></Service>
+              {products.map((product, index) => (
+                <Service key={index} service={product}></Service>
               ))}
             </div>
           </div>

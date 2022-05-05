@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ManageOrderDetails = (props) => {
-  const { allOrders, setAllOrders, isStatus, setIsStatus } = props;
+  const {  setIsStatus } = props;
   const {
     email,
     userEmail,
@@ -60,14 +60,14 @@ const ManageOrderDetails = (props) => {
           )} */}
 
           <button
-            className="btn btn-clr text-white m-1"
+            className="btn button-color text-white m-1"
             onClick={() => handleStatus("approved", _id)}
           >
             Approved
           </button>
 
           <button
-            className="btn btn-clr text-white "
+            className="btn button-color text-white "
             onClick={() => handleStatus("done", _id)}
           >
             Done

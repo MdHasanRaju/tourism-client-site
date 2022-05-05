@@ -11,7 +11,7 @@ const Header = () => {
     <nav className="navbar navbar-expand-lg navbar-light nav-bg">
       <div className="container">
       <Link className="navbar-brand text-light" to="/">
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo" />
           </Link>
         <button
           className="navbar-toggler"

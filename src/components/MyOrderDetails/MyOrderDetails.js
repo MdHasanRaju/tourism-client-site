@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 const MyOrderDetails = (props) => {
@@ -6,8 +6,6 @@ const MyOrderDetails = (props) => {
   const {
     productName,
     productPrice,
-    index,
-    desc,
     email,
     userName,
     orderDate,

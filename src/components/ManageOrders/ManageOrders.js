@@ -21,7 +21,6 @@ const ManageOrders = () => {
         } catch (error) {
           if (!unmounted) {
             toast.error(error);
-            console.log(error);
             setIsStatus(false)
           }
         }
@@ -51,13 +50,13 @@ const ManageOrders = () => {
               </tr>
             </thead>
             <tbody>
-              {allOrders?.map((order) => (
+              {allOrders?.map((order, index) => (
                 <ManageOrderDetails
                   isStatus={isStatus}
                   setIsStatus={setIsStatus}
                   allOrders={allOrders}
                   setAllOrders={setAllOrders}
-                  key={order._id}
+                  key={index}
                   manageOrders={order}
                 ></ManageOrderDetails>
               ))}
