@@ -14,7 +14,7 @@ const MyOrderDetails = (props) => {
   } = props.myOrder;
 
   const handleDelete = (id) => {
-    fetch(`https://stormy-harbor-04955.herokuapp.com/deleteService/${id}`, {
+    fetch(`https://tourism-server-site-rw3r.onrender.com/deleteService/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",

@@ -14,7 +14,7 @@ const AddNewService = () => {
   const onSubmit = (data) => {
     let unmounted = false;
     data.email = user?.email;
-    fetch("https://stormy-harbor-04955.herokuapp.com/addNewService", {
+    fetch("https://tourism-server-site-rw3r.onrender.com/addNewService", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -8,7 +8,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     fetch(
-      "https://stormy-harbor-04955.herokuapp.com/ownOrder?email=" + user.email
+      "https://tourism-server-site-rw3r.onrender.com/ownOrder?email=" + user.email
     )
       .then((res) => res.json())
       .then((data) => {

@@ -17,7 +17,7 @@ const ManageOrderDetails = (props) => {
 
   const handleStatus = (value, id) => {
     console.log(value, id);
-    fetch(`https://stormy-harbor-04955.herokuapp.com/update/${id}`, {
+    fetch(`https://tourism-server-site-rw3r.onrender.com/update/${id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",

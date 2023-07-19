@@ -11,7 +11,7 @@ const ServiceDetails = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        fetch("https://stormy-harbor-04955.herokuapp.com/products/")
+        fetch("https://tourism-server-site-rw3r.onrender.com/products/")
           .then((res) => res.json())
           .then((data) => {
             const matchedItem = data?.find((item) => item.key === serviceId);
@@ -31,7 +31,7 @@ const ServiceDetails = () => {
       productName,productPrice, email, orderDate, userName, status
     };
 
-    fetch("https://stormy-harbor-04955.herokuapp.com/addUserOrder", {
+    fetch("https://tourism-server-site-rw3r.onrender.com/addUserOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(orderDetails),

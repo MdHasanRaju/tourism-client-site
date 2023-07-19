@@ -9,7 +9,7 @@ const ManageOrders = () => {
   useEffect( () => {
     let unmounted = false;
     setIsStatus(true);
-    fetch("https://stormy-harbor-04955.herokuapp.com/my_order")
+    fetch("https://tourism-server-site-rw3r.onrender.com/my_order")
       .then((res) => res?.json())
       .then((data) => {
         try {
